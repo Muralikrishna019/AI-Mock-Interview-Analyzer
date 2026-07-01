@@ -1,0 +1,8 @@
+Project Explanation / Option 1 Resume Points
+============================================
+
+• Architected and developed a full-stack AI-powered mock interview platform using React, TypeScript, and Tailwind CSS for a responsive frontend, with a FastAPI (Python) backend to seamlessly process and analyze user responses.
+
+• Integrated Natural Language Processing (NLP) capabilities into the backend using custom Python analyzers to evaluate both text and audio inputs across 5 key AI metrics—Semantic Relevance, Confidence & Tone, Keyword Match, Clarity, and Delivery—providing users with dynamic, real-time feedback and actionable insights.
+
+• Implemented secure user authentication and scalable database storage utilizing Supabase (PostgreSQL), ensuring robust state management and a personalized dashboard experience for tracking historical interview performance and analytics.

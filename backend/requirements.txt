@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+sentence-transformers
+transformers
+torch
+pydub
+SpeechRecognition
+nltk
+numpy

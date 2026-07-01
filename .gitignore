@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+.venv-1/
+.venv313/
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# OS/editor
+.DS_Store
+.vscode/
+
+# Model artifacts
+sbert_model/
+weights.pkl
+*.zip
