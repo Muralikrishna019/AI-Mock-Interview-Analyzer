@@ -58,11 +58,9 @@ def get_word_count(text):
 def get_sentence_count(text):
     return len(sent_tokenize(text))
 
+FILLER_RE = re.compile(r"\b(?:um|uh|like|basically|you know|kind of|sort of|actually|literally)\b")
 def get_filler_word_count(text):
-    fillers = ["um","uh","like","basically","you know",
-               "kind of","sort of","actually","literally"]
-    text_lower = text.lower()
-    return sum(text_lower.count(f) for f in fillers)
+    return len(FILLER_RE.findall(text.lower()))
 
 # ── 4 Analysis functions  
 def get_semantic_score(question, answer):
@@ -102,8 +100,8 @@ def get_clarity_score(answer, q_data):
     avg_len = word_count / max(sent_count, 1)
     if 10 <= avg_len <= 25:
         structure_score = 1.0
-    elif avg_len < 5:
-        structure_score = 0.5
+    elif avg_len < 10:
+        structure_score = 0.5 + 0.5 * max(0.0, avg_len - 5) / 5
     else:
         structure_score = max(0.4, 1 - (avg_len - 25) / 50)
 
